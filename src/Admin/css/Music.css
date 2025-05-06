@@ -1,0 +1,669 @@
+/* Music Content Styles */
+.music-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  .music-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .view-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    padding: 0.3rem;
+  }
+  
+  .view-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .view-tab:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .view-tab.active {
+    background-color: #6c63ff;
+    color: white;
+  }
+  
+  .music-filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .genre-filter {
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .btn-add-music {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-add-music:hover {
+    background-color: #5a52cc;
+  }
+  
+  /* Tracks View Styles */
+  .tracks-table-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tracks-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tracks-table th {
+    text-align: left;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+    color: #666;
+    font-weight: 600;
+  }
+  
+  .tracks-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+  }
+  
+  .sortable-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .sortable-header:hover span {
+    color: #6c63ff;
+  }
+  
+  .play-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .track-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .track-cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #6c63ff;
+  }
+  
+  .track-title {
+    font-weight: 600;
+  }
+  
+  .duration-cell, .date-cell, .downloads-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+  }
+  
+  .genre-electronic {
+    background-color: #e6f7ff;
+    color: #1890ff;
+  }
+  
+  .genre-rock {
+    background-color: #fff1f0;
+    color: #ff4d4f;
+  }
+  
+  .genre-hip-hop {
+    background-color: #f9f0ff;
+    color: #722ed1;
+  }
+  
+  .genre-r-b {
+    background-color: #fcf4db;
+    color: #d4b106;
+  }
+  
+  .genre-world {
+    background-color: #e6fffb;
+    color: #13c2c2;
+  }
+  
+  .genre-ambient {
+    background-color: #f6ffed;
+    color: #52c41a;
+  }
+  
+  .track-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #f5f5f5;
+    color: #6c63ff;
+    border-color: #6c63ff;
+  }
+  
+  /* Albums View Styles */
+  .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .album-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .album-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .album-cover {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .album-art {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff6584;
+  }
+  
+  .album-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .album-cover:hover .album-play-btn {
+    opacity: 1;
+  }
+  
+  .album-info {
+    padding: 1.2rem;
+    flex-grow: 1;
+  }
+  
+  .album-info h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .album-artist {
+    color: #666;
+    margin: 0 0 1rem 0;
+  }
+  
+  .album-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #666;
+    font-size: 0.85rem;
+  }
+  
+  .album-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.8rem 1.2rem;
+    background-color: #f8f9fa;
+    gap: 0.5rem;
+  }
+  
+  /* Artists View Styles */
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .artist-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .artist-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .artist-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #6c63ff;
+  }
+  
+  .artist-name-container h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .artist-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .stat-item {
+    flex: 1;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .artist-actions {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .btn-primary {
+    flex: 1;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #5a52cc;
+  }
+  
+  .btn-secondary {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    padding: 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f0f0f0;
+    color: #6c63ff;
+    border-color: #6c63ff;
+  }
+  
+  /* Now Playing Bar */
+  .now-playing-bar {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    right: 0;
+    background-color: white;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 90;
+  }
+  
+  .now-playing-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .now-playing-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #6c63ff20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #6c63ff;
+  }
+  
+  .now-playing-title {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .now-playing-artist {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .now-playing-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .control-btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Responsive Styles for Music Section */
+  @media (max-width: 1024px) {
+    .music-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .view-tabs {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .music-filters {
+      width: 100%;
+      margin: 1rem 0;
+    }
+    
+    .search-box {
+      width: 100%;
+    }
+    
+    .btn-add-music {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .albums-grid, .artists-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    
+    .now-playing-bar {
+      left: 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .albums-grid, .artists-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .view-tab span {
+      display: none;
+    }
+    
+    .view-tab {
+      flex: 1;
+      justify-content: center;
+    }
+    
+    .track-actions .action-btn {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .meta-item span {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Enhanced Visual Effects */
+  .tracks-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .album-card, .artist-card {
+    border: 1px solid #f0f0f0;
+  }
+  
+  .album-card:hover, .artist-card:hover {
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.15);
+  }
+  
+  /* Progress Bar for Tracks (Visual Enhancement) */
+  .track-progress {
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #6c63ff;
+    width: 65%; /* Will be dynamic in real implementation */
+  }
+  
+  /* Tooltip Styles */
+  [data-tooltip] {
+    position: relative;
+  }
+  
+  [data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 100;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f8f9fa;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6c63ff;
+  }
+  
+  /* Audio Player Controls (Additional Elements) */
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 120px;
+  }
+  
+  .volume-slider {
+    flex: 1;
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .volume-level {
+    height: 100%;
+    background-color: #6c63ff;
+    width: 70%;
+  }
+  
+  /* Enhanced Badge Styles */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .album-card, .artist-card {
+    animation: fadeIn 0.3s ease-out;
+  }

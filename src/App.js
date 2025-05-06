@@ -1,28 +1,20 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Admin from './Admin/dashboard';
+import Home from './Home';
+import User from './User/dashboardUser';
+import Settings from './Admin/settings';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <div className="container">
-          <nav className="navbar">
-            <div className="logo">
-              <i className="fas fa-music"></i> Melodify
-            </div>
-            <ul className="nav-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#plans">Pricing</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#about">About</a></li>
-            </ul>
-            <div className="auth-buttons">
-              <button className="btn btn-login" onClick={openLoginModal}>Login</button>
-              <button className="btn btn-register" onClick={openRegisterModal}>Register</button>
-            </div>
-          </nav>
-        </div>
-      </header>
+    <div>
+      <Routes>
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/user" element={<User />} />
+      <Route path="/admin/setting" element={<Settings />} />
+    </Routes>
     </div>
   );
 }
