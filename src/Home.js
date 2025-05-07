@@ -109,8 +109,6 @@ const Home = () => {
           if (e.target === loginModal) closeModal(loginModal);
           if (e.target === registerModal) closeModal(registerModal);
         });
-
-        
     
         // Scroll animations
         const featureCards = document.querySelectorAll('.feature-card');
