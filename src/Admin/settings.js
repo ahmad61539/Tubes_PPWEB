@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './css/settings.css';
-import './css/Dashboard.css';
-import './css/Music.css';
 import { useNavigate } from 'react-router-dom';
 import { LogOut } from 'lucide-react';
 import {
@@ -18,7 +16,6 @@ import {
   Mail,
   Key,
   Smartphone,
-  Moon,
   Save,
   AlertTriangle,
   CheckCircle,
@@ -150,19 +147,6 @@ const Settings = () => {
         </div>
         
         <div className="settings-footer">
-          <div className="dark-mode-toggle">
-            <Moon size={20} />
-            <span>Dark Mode</span>
-            <label className="toggle-switch">
-              <input 
-                type="checkbox" 
-                checked={isDarkMode} 
-                onChange={toggleDarkMode}
-              />
-              <span className="toggle-slider"></span>
-            </label>
-          </div>
-          
           <button
   className="btn-logout-settings"
   onClick={() => navigate('/admin')}

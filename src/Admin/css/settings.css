@@ -196,6 +196,12 @@
     background-color: #2a2a4a;
     color: #e0e0e0;
   }
+
+  .dark-mode-toggle span {
+    transform: none !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+  }
   
   .toggle-switch {
     position: relative;
@@ -1578,17 +1584,7 @@
       opacity: 1;
     }
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+
   
   /* Additional Accessibility Styles */
   .skip-link {

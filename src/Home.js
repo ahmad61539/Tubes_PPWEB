@@ -209,13 +209,6 @@ const Home = () => {
             <p className="hero-subtitle">Stream millions of songs, follow artists, and enjoy personalized recommendations.</p>
             <button className="btn btn-register" id="openRegisterModalHero">Start Free</button>
           </div>
-          <div className="hero-image">
-            <img src="/api/placeholder/500/400" alt="Music Illustration" style={{ width: '100%', borderRadius: '10px' }} />
-            <div className="music-note note-1">♪</div>
-            <div className="music-note note-2">♫</div>
-            <div className="music-note note-3">♩</div>
-            <div className="music-note note-4">♬</div>
-          </div>
         </div>
       </section>
 
